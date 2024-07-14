@@ -38,4 +38,7 @@ public static class Handler
   LoadFattureOrdinarie(paths).ConvertAll(fattura => new FatturaRidotta(fattura));
   public static List<FatturaRidotta> LoadFattureRidotte(string xmlDiretory, XmlReaderSettings? settings = null) =>
   LoadFattureOrdinarie(LoadXMLFilePathsFromDirectory(xmlDiretory)).ConvertAll(fattura => new FatturaRidotta(fattura));
+
+  public static List<FatturaRidottaWithDescription> LoadFattureRidotteWithDescription(string xmlDiretory, XmlReaderSettings? settings = null) =>
+  LoadFattureOrdinarie(LoadXMLFilePathsFromDirectory(xmlDiretory)).ConvertAll(fattura => new FatturaRidottaWithDescription(fattura));
 }
