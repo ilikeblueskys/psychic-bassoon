@@ -15,7 +15,7 @@ Molte piccole realtà italiane (P.IVA) non hanno bisogno di un gestionale e poss
 ## Usage 
 ```bash
 > ./FatturazioneXML
-dotnet run <xml_directory> <csv_output>
+dotnet run <xml_directory> <csv_output> <mode>
 ```
 
 ## Dependencies
