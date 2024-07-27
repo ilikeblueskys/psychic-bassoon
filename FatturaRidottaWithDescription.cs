@@ -12,10 +12,6 @@ public class FatturaRidottaWithDescription : FatturaRidotta
     var anagrafica = fattura.FatturaElettronicaHeader.CessionarioCommittente.DatiAnagrafici.Anagrafica;
     this.Denominazione = anagrafica.Denominazione ?? $"{anagrafica.CognomeNome}";
     this.Descrizione = fattura.FatturaElettronicaBody.First().DatiBeniServizi.DettaglioLinee.First().Descrizione;
-
-    Console.WriteLine(this.Denominazione);
-    Console.WriteLine(this.Descrizione);
-
   }
 
   override public string ToString()
